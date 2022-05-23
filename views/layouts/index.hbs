@@ -1,0 +1,18 @@
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <link rel="stylesheet" type="text/css" href="app.css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
+        <title>AWS-Tool</title>
+    </head>
+    <body>
+        <nav class="flexrow">
+            {{#each profiles as |profile|}}
+            <a class="text-box" href="/{{@key}}">{{@key}}</a>
+            {{/each}}
+        </nav>
+        {{{body}}}
+    </body>
+</html>

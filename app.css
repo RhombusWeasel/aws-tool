@@ -1,0 +1,19 @@
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    border: 2px;
+    border-color: black;
+}
+.text-box {
+    text-align: center;
+    border: 2px;
+    border-color: black;
+    flex: 50%;
+}
+.s3-box {
+    padding: 10px;
+    flex: 10%;
+}
+.center {
+    text-align: center;
+}

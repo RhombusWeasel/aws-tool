@@ -1,0 +1,32 @@
+<section>
+    <h1 class="text-box">{{account.name}}</h1>
+    <div class="flexrow">
+    {{#if account.s3}}
+        <div class="s3-box">
+            <h3 class="center">S3</h3>
+            <table>
+        {{#each account.s3.buckets as |bucket|}}
+                <tr>
+            {{#ifCond bucket.open '==' false}}
+                    <td>></td>
+                    <td title="{{bucket.CreationDate}}">{{bucket.name}}</td>
+            {{else}}
+                    <td>v</td>
+                    <td title="{{bucket.CreationDate}}">{{bucket.name}}</td>
+                {{#each bucket.contents as |data|}}
+                </tr>
+                <tr>
+                    <td>|</td>
+                    <td title="{{data.CreationDate}}">{{data.Name}}</td>
+                {{/each}}
+            {{/ifCond}}
+                </tr>
+        {{/each}}
+            </table>
+        </div>
+    {{/if}}
+        <div style="flex: 90%;">
+            <h1 class="text-box">Other Modules Here</h1>
+        </div>
+    </div>
+</section>
